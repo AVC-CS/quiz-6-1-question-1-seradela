@@ -4,7 +4,6 @@
 #include <iostream>
 using namespace std;
 
-// Get two integer values from the user such that begin < end
 void getTwoValues(int &begin, int &end) {
     do {
         cout << "Enter two integers (begin < end): ";
@@ -15,7 +14,6 @@ void getTwoValues(int &begin, int &end) {
     } while (begin >= end);
 }
 
-// Helper function to check if a number is prime
 bool isPrime(int num) {
     if (num < 2) return false;
     for (int i = 2; i * i <= num; ++i) {
@@ -24,7 +22,6 @@ bool isPrime(int num) {
     return true;
 }
 
-// Return the next prime number after the given "begin"
 int getNextPrime(int begin) {
     int next = begin + 1;
     while (!isPrime(next)) {
@@ -33,7 +30,6 @@ int getNextPrime(int begin) {
     return next;
 }
 
-// Return the previous prime number before the given "end"
 int getPrevPrime(int end) {
     int prev = end - 1;
     while (prev > 1 && !isPrime(prev)) {
